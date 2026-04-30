@@ -48,7 +48,4 @@ RUN pip install -e . --user --no-cache-dir \
   && mkdir /freqtrade/user_data/ \
   && freqtrade install-ui
 
-ENTRYPOINT ["freqtrade"]
-# Default to trade mode
-CMD [ "trade" ]
-CMD [CMD ["freqtrade", "trade", "--config", "user_data/config.json", "--strategy", "MyFirstStrategy"]
+CMD ["freqtrade", "trade", "--config", "user_data/config.json", "--strategy", "MyFirstStrategy"]
